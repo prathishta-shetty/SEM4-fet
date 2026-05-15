@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pull-Down Menu and List Box</title>
+    <title>Course Selection Form</title>
 
     <script>
-        // Event Handler Function for Pull-Down Menu
         function showCourse() {
             let course = document.getElementById("course").value;
-            document.getElementById("result1").innerHTML =
+
+            document.getElementById("courseResult").innerHTML =
                 "Selected Course: " + course;
         }
 
-        // Event Listener for List Box
         window.onload = function () {
-            document.getElementById("city").addEventListener("change", function () {
-                let city = this.value;
-                document.getElementById("result2").innerHTML =
-                    "Selected City: " + city;
+
+            document.getElementById("subject").addEventListener("change", function () {
+
+                let subject = this.value;
+
+                document.getElementById("subjectResult").innerHTML =
+                    "Selected Subject: " + subject;
             });
+
         };
     </script>
 </head>
 
-<body>
+<body bgcolor="lightblue">
 
-    <h2>Pull-Down Menu Example</h2>
-
-    <!-- Pull-Down Menu -->
-    <select id="course" onchange="showCourse()">
-        <option value="">Select Course</option>
-        <option value="C Programming">C Programming</option>
-        <option value="Java">Java</option>
-        <option value="Python">Python</option>
-    </select>
-
-    <p id="result1"></p>
+    <h1 align="center">Course Registration Form</h1>
 
     <hr>
 
-    <h2>List Box Example with Event Listener</h2>
+    <h2>Select Your Course</h2>
 
-    <!-- List Box -->
-    <select id="city" size="4">
-        <option value="Bangalore">Bangalore</option>
-        <option value="Mysore">Mysore</option>
-        <option value="Mangalore">Mangalore</option>
-        <option value="Hubli">Hubli</option>
+    <select id="course" onchange="showCourse()">
+        <option>Select Course</option>
+        <option>BCA</option>
+        <option>BSc</option>
+        <option>BCom</option>
+        <option>BE</option>
     </select>
 
-    <p id="result2"></p>
+    <p id="courseResult"></p>
+
+    <hr>
+
+    <h2>Select Your Subject</h2>
+
+    <select id="subject" size="5">
+        <option>Mathematics</option>
+        <option>Physics</option>
+        <option>Computer Science</option>
+        <option>Electronics</option>
+        <option>Chemistry</option>
+    </select>
+
+    <p id="subjectResult"></p>
 
 </body>
 </html>
