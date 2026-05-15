@@ -1,132 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z-Index Usage Demo</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            margin-top: 20px;
-            color: #333;
-        }
-
-        .container {
             position: relative;
-            width: 600px;
-            height: 400px;
-            margin: 40px auto;
-            border: 3px solid #333;
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
+            height: 100vh;
+            font-family: Arial, sans-serif;
         }
 
         .box {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             position: absolute;
             color: white;
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 25px;
             text-align: center;
-            line-height: 220px;
-            border-radius: 15px;
-            transition: all 0.5s ease;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            line-height: 200px;
+            border-radius: 10px;
         }
 
         #box1 {
-            background-color: crimson;
-            top: 60px;
-            left: 120px;
+            background-color: red;
+
+            top: 220px;
+            left: 300px;
+
             z-index: 1;
         }
 
         #box2 {
-            background-color: royalblue;
-            top: 110px;
-            left: 220px;
+            background-color: blue;
+
+            top: 120px;
+            left: 420px;
+
             z-index: 2;
-        }
-
-        .buttons {
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 12px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 8px;
-            background-color: #333;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #555;
         }
     </style>
 
     <script>
-        function bringRedFront() {
+        function bringFront() {
+
+            // Manipulating CSS using JavaScript
             document.getElementById("box1").style.zIndex = "3";
             document.getElementById("box2").style.zIndex = "1";
 
-            // Move positions slightly
-            document.getElementById("box1").style.top = "80px";
-            document.getElementById("box1").style.left = "170px";
-        }
-
-        function bringBlueFront() {
-            document.getElementById("box2").style.zIndex = "3";
-            document.getElementById("box1").style.zIndex = "1";
-
-            // Move positions slightly
-            document.getElementById("box2").style.top = "80px";
-            document.getElementById("box2").style.left = "170px";
         }
     </script>
 </head>
 
 <body>
 
-    <h1>Z-Index Manipulation Using JavaScript</h1>
+    <h1>Manipulating CSS with JavaScript</h1>
 
-    <div class="buttons">
-        <button onclick="bringRedFront()">
-            Bring Red Box to Front
-        </button>
+    <button onclick="bringFront()">
+        Bring Red Box to Front
+    </button>
 
-        <button onclick="bringBlueFront()">
-            Bring Blue Box to Front
-        </button>
+    <div id="box1" class="box">
+        Box 1
     </div>
 
-    <div class="container">
-
-        <div id="box1" class="box">
-            RED
-        </div>
-
-        <div id="box2" class="box">
-            BLUE
-        </div>
-
+    <div id="box2" class="box">
+        Box 2
     </div>
 
 </body>
-
 </html>
