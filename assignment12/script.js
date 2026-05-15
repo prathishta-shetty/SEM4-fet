@@ -1,10 +1,10 @@
-
 function countStudents() {
 
+    // While Loop
     let i = 1;
-    let whileText = "Students Present (While Loop): ";
+    let whileText = "While Loop: ";
 
-    while(i <= 5) {
+    while (i <= 5) {
 
         whileText += "Student" + i + " ";
 
@@ -14,8 +14,9 @@ function countStudents() {
     document.getElementById("whileResult").innerHTML = whileText;
 
 
+    // Do While Loop
     let j = 1;
-    let doText = "Students Present (Do While Loop): ";
+    let doText = "Do While Loop: ";
 
     do {
 
@@ -23,7 +24,7 @@ function countStudents() {
 
         j++;
 
-    } while(j <= 5);
+    } while (j <= 5);
 
     document.getElementById("doResult").innerHTML = doText;
 }
