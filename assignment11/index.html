@@ -70,6 +70,19 @@
     <div id="box2" class="box">
         Box 2
     </div>
+    <script>
+
+        function bringRedFront() {
+            document.getElementById("box1").style.zIndex = "3";
+            document.getElementById("box2").style.zIndex = "1";
+        }
+
+        function bringBlueFront() {
+            document.getElementById("box2").style.zIndex = "3";
+            document.getElementById("box1").style.zIndex = "1";
+        }
+
+    </script>
 
 </body>
 </html>
