@@ -1,42 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Image, Anchor and Frame Tags Demo</title>
+    <title>Tech Blog</title>
 </head>
 
-<!-- Frame Tag -->
-<frameset rows="40%,60%">
+<frameset rows="20%,80%">
 
-    <!-- First Frame -->
-    <frame srcdoc='
-        <html>
-        <body bgcolor="lightblue">
-            <h2 align="center">Anchor Tag Example</h2>
+    <frame src="top.html">
 
-            <!-- Anchor Tag -->
-            <p align="center">
-                <a href="https://www.google.com" target="_blank">
-                    Click Here to Visit Google
-                </a>
-            </p>
-        </body>
-        </html>'>
-
-    <!-- Second Frame -->
-    <frame srcdoc='
-        <html>
-        <body bgcolor="lightyellow">
-            <h2 align="center">Image Tag Example</h2>
-
-            <!-- Image Tag -->
-            <center>
-                <img src="https://via.placeholder.com/200"
-                     alt="Sample Image"
-                     width="200"
-                     height="200">
-            </center>
-        </body>
-        </html>'>
+    <frame src="content.html">
 
 </frameset>
 
